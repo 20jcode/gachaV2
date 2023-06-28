@@ -18,27 +18,6 @@ import java.util.Map;
  */
 public class GachaTest {
 
-	@Nested
-	@DisplayName("가챠가 생성 되는가?")
-	public class CreateTest{
-		private Item item;
-
-		@Test
-		@DisplayName("생성자 테스트")
-		void canCreate(){
-
-			//given
-
-			item = new Item();
-
-			//when
-			GachaInterface gacha = new Gacha(item);
-			// 가챠에서는 item에서 어떤 정보를 원하는가?
-			// 해당 item을 만들기 위한 정보
-
-
-		}
-	}
 
 	@Nested
 	@DisplayName("가챠의 계산이 가능한가?")
@@ -55,11 +34,11 @@ public class GachaTest {
 			double a = 0.01d;
 			double b = 0.02d;
 
-			ans = new LinkedHashMap<>();
+			private Map<Integer>
 
 			//when
 
-			ans.put()
+			ans =
 		}
 
 	}
