@@ -6,10 +6,14 @@ import org.gacha.ginterface.ItemInterface;
 
 import java.util.Map;
 
+/**
+ * 가챠매니저는 가챠 결과에 대해 알아야함
+ *
+ */
 public class GachaManager implements GachaManagerInterface {
 
 	private GachaInterface gacha;
-	private Map<Integer, Map<Integer,Integer>> gachaANS;
+	private Map<Integer, Map<Integer,Integer>> gachaANS; //TODO: LinkedHashMap으로 키를 중복할 수 있도록 해야함
 
 
 	public GachaManager(GachaInterface gacha){
