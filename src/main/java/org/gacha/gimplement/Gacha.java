@@ -21,23 +21,4 @@ public class Gacha implements GachaInterface {
 		//TODO : item객체를 받아서 해당 item에 맞는 가챠로직 생성
 	}
 
-	/**
-	 *
-	 * @param args 확률 기입
-	 * @return Map<Integer 총뽑기횟수,<String 첫번째 아이템 이름,Integer 뽑은 갯수>,<...>>
-	 */
-	@Override
-	public static String cal (double... args) {
-
-
-
-		// 뽑을 아이템 이름들을 입력받는다
-		// 해당 item에 대한 확률 값 변수를 검증한다
-		// 아이템의 이름들이 서로 다른 소비item이라면 err
-		//
-
-
-
-		return null;
-	}
 }

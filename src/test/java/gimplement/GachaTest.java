@@ -34,11 +34,11 @@ public class GachaTest {
 			double a = 0.01d;
 			double b = 0.02d;
 
-			private Map<Integer>
+
 
 			//when
 
-			ans =
+
 		}
 
 	}
