@@ -13,10 +13,13 @@ public abstract class GachaNanagerAbstract {
 
 	public abstract void doGacha(ItemAbstract item);
 
-	// ans.append(gacha(item이름))
-	// ans sort
-	// ans 10개로 나누고 합치기
 
+
+	/**
+	 *
+	 * @param num 10단위 구간으로 10 : 상위 0~10%, 20 : 상위 10~20%
+	 * @return 해당 구간의 결과를 보여줌
+	 */
 	public abstract String getAnsTop(int num);
 
 }

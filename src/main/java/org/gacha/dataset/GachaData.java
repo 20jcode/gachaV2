@@ -1,9 +1,20 @@
 package org.gacha.dataset;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class GachaData {
 
-	public int gachaUseItemValue; //총 소비한 item
-	public HashMap<String,Integer> gachaGetItemValue; //gacha를 통해 얻은 item들
+	public  GachaData(){
+		this.gachaUseItemValue = 0;
+		this.gachaGetItemValue = new HashMap<>();
+	}
+	/**
+	 * 총 가챠 횟수
+	 */
+	public int gachaUseItemValue;
+	/**
+	 * 획득한 item이름 : 갯수
+	 */
+	public Map<String,Integer> gachaGetItemValue;
 }

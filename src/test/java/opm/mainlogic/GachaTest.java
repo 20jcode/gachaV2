@@ -1,6 +1,7 @@
 package opm.mainlogic;
 
 import opm.testdataset.ItemDSK;
+import org.gacha.dataset.GachaData;
 import org.gacha.opm.mainlogic.Gacha;
 import org.gacha.opm.mainlogic.Item;
 import org.junit.jupiter.api.Assertions;
@@ -40,5 +41,19 @@ public class GachaTest {
 
 
 	}
+
+	@Test
+	@DisplayName("oneItemCal 정상작동?")
+	void oneItemCalTest(){
+		Item item = new ItemDSK(); //만들고자하는 item
+
+		Gacha gacha = new Gacha(item); //gacha인스턴스 생성
+
+		GachaData a = gacha.oneItemCal("blacktiket");
+
+		System.out.println(a.gachaGetItemValue);
+		System.out.println(a.gachaUseItemValue);
+	}
+
 
 }

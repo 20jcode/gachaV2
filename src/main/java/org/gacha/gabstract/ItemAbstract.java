@@ -20,5 +20,8 @@ public abstract class ItemAbstract {
 	 */
 	public int needValue;
 
+	// TODO : isMoreNeed가 false이면 뽑을 수 없다.(gacha를 통해서 얻을 수 없는 것) 를 구현하기
+	public double probability; //뽑을 확률
+
 
 }

@@ -12,10 +12,7 @@ public abstract class GachaAbstract { //static class?
 		this.item = item;
 	}
 
-	/**
-	 *
-	 * @return
-	 */
+
 	public abstract GachaData cal ();
 
 	/**
@@ -36,9 +33,9 @@ public abstract class GachaAbstract { //static class?
 	public abstract Set<String> findGachaUseItem (ItemAbstract item, Set<String> ans);
 
 	/**
-	 *
-	 * @param itemname
+	 * 하나의 item으로 한개 이상의 item이 뽑힐 경우
+	 * @param itemName 소모하는 item 이름
 	 * @return
 	 */
-	public abstract GachaData oneItemCal(String itemname);
+	public abstract GachaData oneItemCal(String itemName);
 }

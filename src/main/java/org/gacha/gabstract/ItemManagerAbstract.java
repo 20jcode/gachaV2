@@ -19,12 +19,11 @@ public abstract class ItemManagerAbstract {
 	 */
 	public abstract ItemAbstract getItem(String itemName);
 
-
-
-
-
-
-
-
+	/**
+	 * item의 이름을 입력하면, 해당 item
+	 * @param itemName
+	 * @return
+	 */
+	public abstract double getItemProbability(String itemName);
 
 }

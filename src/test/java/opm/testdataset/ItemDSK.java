@@ -31,8 +31,11 @@ public class ItemDSK extends Item {
 		item1.needValue = 4;
 		item2.needValue = 1;
 
+		item1.probability = 0.013333d;
+		item2.probability = 0.006667d;
+
 		//하위2 객체 설정
-		Item item3 = new Item("blacktiket",null,false,0);
+		Item item3 = new Item("blacktiket",null,false,0,0);
 
 		//하위1 <- 하위2
 		item1.forMakeNeedItems.add(item3);
