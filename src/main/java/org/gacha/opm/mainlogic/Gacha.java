@@ -42,7 +42,7 @@ public class Gacha extends GachaAbstract {
 	 */
 	@Override
 	public Set<String> findGachaUseItem (ItemAbstract item,Set<String> ans) { //TODO : item을 전달할 필요가 없는듯
-
+		/*
 		if (item.isMoreNeed){
 			for (ItemAbstract element : item.forMakeNeedItems) {
 				findGachaUseItem(element,ans);
@@ -50,6 +50,8 @@ public class Gacha extends GachaAbstract {
 		} else {
 			ans.add(item.itemName);
 		}
+
+		 */
 		return null;
 	}
 

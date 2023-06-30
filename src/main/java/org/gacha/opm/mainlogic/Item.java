@@ -13,4 +13,6 @@ public class Item extends ItemAbstract {
 	public Item (String itemName, Map<Integer, String> underItemName, Map<Integer, String> topItemName, Map<String, Integer> needValue, double probability) {
 		super(itemName, underItemName, topItemName, needValue, probability);
 	}
+
+	
 }

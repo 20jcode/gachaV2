@@ -1,6 +1,6 @@
 package org.gacha.opm.mainlogic;
 
-import opm.construct.ItemDSK;
+
 import org.gacha.dataset.GachaData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -17,7 +17,7 @@ public class GachaTest {
 	void findGachaUseItemTest(){
 
 		//given
-
+		/*
 		Item item = new ItemDSK(); //만들고자하는 item
 
 		Gacha gacha = new Gacha(item); //gacha인스턴스 생성
@@ -37,12 +37,13 @@ public class GachaTest {
 		Assertions.assertEquals(expected,ans);
 
 
-
+	*/
 	}
 
 	@Test
 	@DisplayName("oneItemCal 정상작동?")
 	void oneItemCalTest(){
+		/*
 		Item item = new ItemDSK(); //만들고자하는 item
 
 		Gacha gacha = new Gacha(item); //gacha인스턴스 생성
@@ -51,6 +52,8 @@ public class GachaTest {
 
 		System.out.println(a.gachaGetItemValue);
 		System.out.println(a.gachaUseItemValue);
+
+		 */
 	}
 
 

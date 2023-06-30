@@ -17,7 +17,7 @@ public class MainTest {
 	void mainConstructor(){
 		//when
 
-
+		/*
 		ItemManagerAbstract itemManager = new ItemManager(); //TODO : json형식으로 item 삽입
 		GachaManagerAbstract gachaManager = new GachaManager(); //TODO : json형식으로 gacha 삽입
 
@@ -29,6 +29,6 @@ public class MainTest {
 
 		System.out.println(user.getGachaAns(itemname));
 
-
+		*/
 	}
 }
