@@ -1,15 +1,19 @@
 package org.gacha.gabstract;
 
-import org.gacha.dataset.GachaData;
-
 import java.util.ArrayList;
 
 public abstract class GachaManagerAbstract {
 
-	private ArrayList<GachaData> ans;
 
-	private GachaAbstract gacha;
+	protected ArrayList<GachaDataAbstract> ans;
 
+	public ItemManagerAbstract itemManager;
+
+	protected GachaManagerAbstract(){};
+
+	public GachaManagerAbstract(ItemManagerAbstract itemManager){
+		this.itemManager = itemManager;
+	}
 	public abstract void doGacha(ItemAbstract item);
 
 	/**

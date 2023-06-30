@@ -3,20 +3,26 @@ package org.gacha.opm.mainlogic;
 import org.gacha.gabstract.GachaAbstract;
 import org.gacha.gabstract.GachaManagerAbstract;
 import org.gacha.gabstract.ItemAbstract;
+import org.gacha.gabstract.ItemManagerAbstract;
 
 public class GachaManager extends GachaManagerAbstract {
 
-	public GachaManager(){
+	private GachaManager(){}
 
+	public GachaManager(ItemManagerAbstract itemManager){
+		super(itemManager);
 	}
 	@Override
 	public void doGacha (ItemAbstract item) {
 
-		GachaAbstract gacha = new GachaV2();
+		//TODO : 구현하기
 
-		gacha.cal();
+		//GachaAbstract gacha = new GachaV2();
 
-		ans.add(gacha.getAns());
+		//gacha.setIsSky();
+		//gacha.setHalfSky();
+
+		//ans.add(gacha.cal());
 
 	}
 

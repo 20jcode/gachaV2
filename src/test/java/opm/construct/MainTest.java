@@ -38,7 +38,7 @@ public class MainTest {
 		itemSetter.setItemSet(itemDsk,itemGevo,itemDsk2gack,itemDskgackstone,itemBlacktiket);
 
 		ItemManagerAbstract itemManager = new ItemManager(itemSetter.getItemSet()); //TODO : json형식으로 item 삽입
-		GachaManagerAbstract gachaManager = new GachaManager(); //TODO : json형식으로 gacha 삽입
+		GachaManagerAbstract gachaManager = new GachaManager(itemManager); //TODO : json형식으로 gacha 삽입
 
 		UserAbstract user = new User(itemManager,gachaManager);
 

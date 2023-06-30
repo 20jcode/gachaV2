@@ -1,13 +1,8 @@
 package org.gacha.opm.mainlogic;
 
 
-import org.gacha.dataset.GachaData;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashSet;
-import java.util.Set;
 
 
 public class GachaTest {
@@ -48,7 +43,7 @@ public class GachaTest {
 
 		Gacha gacha = new Gacha(item); //gacha인스턴스 생성
 
-		GachaData a = gacha.oneItemCal("blacktiket");
+		GachaDataAbstract a = gacha.oneItemCal("blacktiket");
 
 		System.out.println(a.gachaGetItemValue);
 		System.out.println(a.gachaUseItemValue);
