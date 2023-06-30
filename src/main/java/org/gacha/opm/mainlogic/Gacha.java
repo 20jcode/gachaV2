@@ -9,6 +9,7 @@ import java.util.Objects;
 import java.util.Random;
 import java.util.Set;
 
+@Deprecated
 public class Gacha extends GachaAbstract {
 	public Gacha (ItemAbstract item) {
 		super(item);
@@ -113,5 +114,8 @@ public class Gacha extends GachaAbstract {
 		return 0;
 	}
 
+	@Override
+	public void getAns () {
 
+	}
 }

@@ -12,8 +12,9 @@ public abstract class GachaAbstract { //static class?
 		this.item = item;
 	}
 
+	public abstract void getAns();
 
-	public abstract GachaData cal ();
+	public abstract GachaData cal();
 
 	/**
 	 *
@@ -38,4 +39,6 @@ public abstract class GachaAbstract { //static class?
 	 * @return
 	 */
 	public abstract GachaData oneItemCal(String itemName);
+
+
 }
