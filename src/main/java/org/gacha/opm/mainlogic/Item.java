@@ -10,6 +10,7 @@ public class Item extends ItemAbstract {
 	public Item(String itemName, Set<ItemAbstract> forMakeNeedItems, boolean isMoreNeed, int needValue,
 	            double probability){
 
+		//TODO : 수정필요
 		this.itemName = itemName;
 		this.forMakeNeedItems = forMakeNeedItems;
 		this.isMoreNeed = isMoreNeed;
