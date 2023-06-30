@@ -2,20 +2,15 @@ package org.gacha.opm.mainlogic;
 
 import org.gacha.gabstract.ItemAbstract;
 
+import java.util.Map;
 import java.util.Set;
 
 public class Item extends ItemAbstract {
 
-	public Item(){};
-	public Item(String itemName, Set<ItemAbstract> forMakeNeedItems, boolean isMoreNeed, int needValue,
-	            double probability){
-
-		//TODO : 수정필요
-		this.itemName = itemName;
-		this.forMakeNeedItems = forMakeNeedItems;
-		this.isMoreNeed = isMoreNeed;
-		this.needValue = needValue;
-		this.probability = probability;
-
+	protected Item(){
+		super();
+	};
+	public Item (String itemName, Map<Integer, String> underItemName, Map<Integer, String> topItemName, Map<String, Integer> needValue, double probability) {
+		super(itemName, underItemName, topItemName, needValue, probability);
 	}
 }
