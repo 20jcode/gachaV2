@@ -9,4 +9,11 @@ public class GachaData extends GachaDataAbstract {
 	public GachaData(String name){
 		super(name);
 	}
+
+	@Override
+	public void add (String key, int value) {
+		int x = gachaAns.get(key);
+
+		gachaAns.put(key,x+value);
+	}
 }
