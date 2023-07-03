@@ -1,6 +1,7 @@
 package org.gacha.gabstract;
 
 import java.util.List;
+import java.util.Map;
 
 public abstract class ItemManagerAbstract {
 
@@ -26,4 +27,6 @@ public abstract class ItemManagerAbstract {
 	 */
 	public abstract double getItemProbability(String itemName);
 
+
+	public abstract Map<String, Integer> getNeedItemValue (String itemName);
 }

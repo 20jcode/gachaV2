@@ -1,10 +1,10 @@
 package org.gacha.gabstract;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class GachaManagerAbstract {
 
-
+	protected Map<String,GachaAbstract> beforeSetUpGacha;
 	protected ArrayList<GachaDataAbstract> ans;
 
 	public ItemManagerAbstract itemManager;
@@ -12,7 +12,9 @@ public abstract class GachaManagerAbstract {
 	protected GachaManagerAbstract(){};
 
 	public GachaManagerAbstract(ItemManagerAbstract itemManager){
+
 		this.itemManager = itemManager;
+		this.beforeSetUpGacha = new HashMap<>();
 	}
 	public abstract void doGacha(ItemAbstract item);
 
@@ -29,5 +31,12 @@ public abstract class GachaManagerAbstract {
 	 * @return 계산결과
 	 */
 	public abstract String getAnsTopAll();
+
+	/**
+	 * Gacha객체 생성
+	 * @param item 생성하고자하는 item객체 넣기
+	 * @return 생성된 Gacha객체반환
+	 */
+	protected abstract GachaAbstract setUp(ItemAbstract item);
 
 }

@@ -31,6 +31,8 @@ class GachaV2Test {
 
 		//GachaManager가 해야할 일 2 : setIsSky();
 
+		Map<Integer,Set<String>> skyRule = new HashMap<>();
+
 		Set<String> sky50 = new HashSet<>();
 		sky50.add("evo");
 
@@ -41,19 +43,21 @@ class GachaV2Test {
 		sky180.add("evo");
 		sky180.add("gack");
 
-		GachaAbstract gachaV2 = new GachaV2(itemName,needItemValue,itemProbability);
-
-		gachaV2.setIsSky(50,sky50);
-		gachaV2.setIsSky(120,sky120);
-		gachaV2.setIsSky(180,sky180);
+		skyRule.put(50,sky50);
+		skyRule.put(120,sky120);
+		skyRule.put(180,sky180);
 
 		//GachaManager가 해야할일 3 : setHalfSky();
 
-		Set<String> half = new HashSet<>();
-		sky180.add("evo");
-		sky180.add("gack");
+		Map<Integer,Set<String>> halfSkyRule = new HashMap<>();
 
-		gachaV2.setHalfSky(80,half); //귀찮아서 또 사용함
+		halfSkyRule.put(80,sky180);
+
+
+
+		GachaAbstract gachaV2 = new GachaV2(itemName,needItemValue,
+				itemProbability,skyRule,halfSkyRule);
+
 
 		//then
 		GachaDataAbstract gachaData = gachaV2.cal();

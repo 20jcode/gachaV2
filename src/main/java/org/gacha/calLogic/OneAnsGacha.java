@@ -1,5 +1,6 @@
 package org.gacha.calLogic;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -18,6 +19,7 @@ public class OneAnsGacha {
 
 	public OneAnsGacha(Map<String,Double> itemProbability){
 		this.random = new Random();
+		toIntItemProbability = new HashMap<>();
 
 		for(String element : itemProbability.keySet()) {
 			int convertInt = (int)(itemProbability.get(element)* CRCINTONE);
@@ -51,6 +53,16 @@ public class OneAnsGacha {
 		}
 
 		return null;
+	}
+
+	public String mustGetAns() {
+		String s;
+
+		do {
+			s = getAns();
+		} while (s == null);
+
+		return s;
 	}
 
 }

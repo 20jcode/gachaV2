@@ -73,6 +73,10 @@ public class GachaV2 extends GachaAbstract {
 				halfSkyCount = 0;
 			}
 
+			//System.out.println("뽑기횟수 "+gachaData.count);
+			//System.out.println("evo "+gachaData.gachaAns.get("evo"));
+			//System.out.println("gack "+gachaData.gachaAns.get("gack"));
+
 		}
 
 		return gachaData;

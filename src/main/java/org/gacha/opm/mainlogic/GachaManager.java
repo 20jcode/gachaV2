@@ -5,6 +5,8 @@ import org.gacha.gabstract.GachaManagerAbstract;
 import org.gacha.gabstract.ItemAbstract;
 import org.gacha.gabstract.ItemManagerAbstract;
 
+import java.util.Map;
+
 public class GachaManager extends GachaManagerAbstract {
 
 	private GachaManager(){}
@@ -15,6 +17,7 @@ public class GachaManager extends GachaManagerAbstract {
 	@Override
 	public void doGacha (ItemAbstract item) {
 
+		GachaAbstract gacha = setUp(item);
 		//TODO : 구현하기
 
 		//GachaAbstract gacha = new GachaV2();
@@ -32,5 +35,24 @@ public class GachaManager extends GachaManagerAbstract {
 	@Override
 	public String getAnsTopAll () {
 		return null;
+	}
+
+	@Override
+	protected GachaAbstract setUp (ItemAbstract item) {
+		try{
+			return beforeSetUpGacha.get(item.itemName);
+		} catch (NullPointerException e){
+
+			String itemName = item.itemName;
+			Map<String,Integer> needItemValue = itemManager.getNeedItemValue(itemName);
+			Map<String,Double> itemProbability = itemManager.getItemProbability(itemName);
+
+
+
+			GachaAbstract gacha = new GachaV2();
+			beforeSetUpGacha.put(item.itemName,gacha);
+		}
+
+
 	}
 }
