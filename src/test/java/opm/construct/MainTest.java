@@ -1,10 +1,9 @@
 package opm.construct;
 
-import org.gacha.Controller.ItemSetter;
+import org.gacha.controller.ItemSetter;
 import org.gacha.dataset.ItemData;
 import org.gacha.gabstract.*;
 import org.gacha.opm.mainlogic.GachaManager;
-import org.gacha.opm.mainlogic.Item;
 import org.gacha.opm.mainlogic.ItemManager;
 import org.gacha.opm.mainlogic.User;
 import org.junit.jupiter.api.BeforeEach;

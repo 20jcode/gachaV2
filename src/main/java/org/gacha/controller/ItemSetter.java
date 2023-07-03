@@ -1,4 +1,4 @@
-package org.gacha.Controller;
+package org.gacha.controller;
 
 import org.gacha.gabstract.ItemAbstract;
 import org.gacha.opm.mainlogic.Item;

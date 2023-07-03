@@ -1,4 +1,4 @@
-package org.gacha.Controller;
+package org.gacha.controller;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.gacha.gabstract.ItemAbstract;
