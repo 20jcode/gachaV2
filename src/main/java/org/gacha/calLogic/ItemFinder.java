@@ -21,13 +21,13 @@ public class ItemFinder {
 
 		ItemAbstract item = itemManagerAbstract.getItem(itemName);
 
-		if(item.underItemName == null){ //하위 item이 존재하지 않는 경우
+		if(item.underItemName.isEmpty()){ //하위 item이 존재하지 않는 경우
 				for(int element : item.topItemName.keySet()){//상위 아이템 이름 저장
 					data.put(item.topItemName.get(element),null);
 				}
 		} else{
 			for(int i : item.underItemName.keySet()){ //하위 item이 존재
-
+			//TODO : keySet은 int형이기 때문에 value를 찾아서 넣어야함.
 				findNeedItemName(item.underItemName.get(i));
 			}
 
@@ -43,7 +43,7 @@ public class ItemFinder {
 		for(String s : data.keySet()){
 			ItemAbstract item = itemManagerAbstract.getItem(s);
 
-			data.put(s,item.needValue.get(s));
+			data.put(s,item.needValue.get(itemName));
 		}
 
 		return data;

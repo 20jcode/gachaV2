@@ -35,6 +35,14 @@ public class GachaManager extends GachaManagerAbstract {
 
 	@Override
 	public String getAnsTopAll () {
+		//TODO : 출력부분 수정해주기
+		System.out.println(ans.get(0).count);
+
+		for(String key : ans.get(0).gachaAns.keySet()){
+			System.out.println("결과 key : "+key+ans.get(0).gachaAns.get(key));
+		}
+
+
 		return null;
 	}
 
@@ -61,12 +69,12 @@ public class GachaManager extends GachaManagerAbstract {
 			//TODO : 확장성있게 수정해주기
 			Map<Integer, Set<String>> skyRule = new HashMap<>();
 			Set<String> sky50 = new HashSet<>();
-			sky50.add("evo");
+			sky50.add("Gevo");
 			Set<String> sky120 = new HashSet<>();
-			sky120.add("evo");
+			sky120.add("Gevo");
 			Set<String> sky180 = new HashSet<>();
-			sky180.add("evo");
-			sky180.add("gack");
+			sky180.add("Gevo");
+			sky180.add("DSKgackstone");
 			skyRule.put(50,sky50);
 			skyRule.put(120,sky120);
 			skyRule.put(180,sky180);

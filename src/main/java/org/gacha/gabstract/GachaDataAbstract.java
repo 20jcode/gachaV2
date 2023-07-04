@@ -5,13 +5,11 @@ import java.util.Map;
 
 public abstract class GachaDataAbstract {
 
-	protected GachaDataAbstract(){} //TODO : 생성자 이런 디자인이 맞나?
-
-	protected  GachaDataAbstract(String itemName){
-		this.itemName = itemName;
-		this.count = 0;
+	protected GachaDataAbstract(){
 		this.gachaAns = new HashMap<>();
-	}
+		this.count = 0;
+	} //TODO : 생성자 이런 디자인이 맞나?
+
 
 	public String itemName;
 	public int count;

@@ -24,7 +24,7 @@ class GachaV2Test {
 		Map<String,Integer> needItemValue = new HashMap<>();
 		Map<String,Double> itemProbability = new HashMap<>();
 
-		needItemValue.put("evo",4);
+		needItemValue.put("Gevo",4);
 		itemProbability.put("evo",0.013333d);
 		needItemValue.put("gack",1);
 		itemProbability.put("gack",0.006667d);
