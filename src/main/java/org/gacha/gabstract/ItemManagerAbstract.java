@@ -1,11 +1,15 @@
 package org.gacha.gabstract;
 
+import org.gacha.calLogic.ItemFinder;
+
 import java.util.List;
 import java.util.Map;
 
 public abstract class ItemManagerAbstract {
 
-	private List<ItemAbstract> items;
+	public ItemFinder itemFinder;
+
+	protected List<ItemAbstract> items;
 
 	public ItemManagerAbstract(List<ItemAbstract> items){
 
@@ -20,13 +24,7 @@ public abstract class ItemManagerAbstract {
 	 */
 	public abstract ItemAbstract getItem(String itemName);
 
-	/**
-	 * item의 이름을 입력하면, 해당 item
-	 * @param itemName
-	 * @return
-	 */
 	public abstract double getItemProbability(String itemName);
-
 
 	public abstract Map<String, Integer> getNeedItemValue (String itemName);
 }

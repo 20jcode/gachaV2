@@ -41,7 +41,7 @@ public class MainTest {
 
 		UserAbstract user = new User(itemManager,gachaManager);
 
-		String itemName = "blacktiket";
+		String itemName = "dsk";
 
 		user.calcurate(itemName);
 
