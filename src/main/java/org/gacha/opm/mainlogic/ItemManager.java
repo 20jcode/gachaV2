@@ -15,19 +15,25 @@ public class ItemManager extends ItemManagerAbstract {
 
 	public ItemManager(List<ItemAbstract> items){
 
-		super(items);
+		this.items = items;
 		this.itemFinder = new ItemFinder(this);
 		//TODO : 이런식의 참조가 가능할까?
 	};
 
 	@Override
 	public ItemAbstract getItem (String itemName) {
-		for(ItemAbstract i : items){
-			if(EqualsBuilder.reflectionEquals(i.itemName,itemName)){
-				return i;
+
+		try {
+			for (ItemAbstract i : items) {
+				if (EqualsBuilder.reflectionEquals(i.itemName, itemName)) {
+					return i;
+				}
 			}
+		} catch (Exception e){
+			System.out.println(e.toString());
+			System.out.println("getItem : 일치하는 item이 없습니다");
 		}
-		System.out.println("getItem : 일치하는 item이 없습니다");
+
 		return null;
 	}
 

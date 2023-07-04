@@ -19,19 +19,17 @@ public class MainTest {
 	public ItemAbstract itemBlacktiket;
 
 
-	@BeforeEach
-	void setUp(){
-		ItemAbstract itemDsk = ItemData.dsk();
-		ItemAbstract itemGevo = ItemData.gevo();
-		ItemAbstract itemDsk2gack = ItemData.dsk2gack();
-		ItemAbstract itemDskgackstone = ItemData.DSKgackstone();
-		ItemAbstract itemBlacktiket = ItemData.blacktiket();
-	}
 
 	@Test
 	@DisplayName("처음 프로그램 실행 시 생성자 주입")
 	void mainConstructor(){
 		//when
+		ItemAbstract itemDsk = ItemData.dsk();
+		ItemAbstract itemGevo = ItemData.gevo();
+		ItemAbstract itemDsk2gack = ItemData.dsk2gack();
+		ItemAbstract itemDskgackstone = ItemData.DSKgackstone();
+		ItemAbstract itemBlacktiket = ItemData.blacktiket();
+
 
 		ItemSetter itemSetter = new ItemSetter();
 		itemSetter.setItemSet(itemDsk,itemGevo,itemDsk2gack,itemDskgackstone,itemBlacktiket);
@@ -41,7 +39,7 @@ public class MainTest {
 
 		UserAbstract user = new User(itemManager,gachaManager);
 
-		String itemName = "dsk";
+		String itemName = "DSK";
 
 		user.calcurate(itemName);
 

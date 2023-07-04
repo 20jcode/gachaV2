@@ -11,6 +11,8 @@ public abstract class ItemManagerAbstract {
 
 	protected List<ItemAbstract> items;
 
+	public  ItemManagerAbstract(){}
+
 	public ItemManagerAbstract(List<ItemAbstract> items){
 
 		this.items = items;

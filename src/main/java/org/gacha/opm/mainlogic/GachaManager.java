@@ -1,5 +1,6 @@
 package org.gacha.opm.mainlogic;
 
+import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.gacha.gabstract.GachaAbstract;
 import org.gacha.gabstract.GachaManagerAbstract;
 import org.gacha.gabstract.ItemAbstract;
@@ -15,17 +16,22 @@ public class GachaManager extends GachaManagerAbstract {
 	private GachaManager(){}
 
 	public GachaManager(ItemManagerAbstract itemManager){
-		super(itemManager);
+
+		this.itemManager = itemManager;
 	}
 	@Override
 	public void doGacha (ItemAbstract item) {
 
 		GachaAbstract gacha = setUp(item);
+		ans.add(gacha.cal());
 
 	}
 
 	@Override
-	public String getAnsTop (int num) {return null;}
+	public String getAnsTop (int num) {
+
+		return ans.toString();
+	}
 
 	@Override
 	public String getAnsTopAll () {
@@ -35,8 +41,13 @@ public class GachaManager extends GachaManagerAbstract {
 	@Override
 	protected GachaAbstract setUp (ItemAbstract item) {
 		try{
-			return beforeSetUpGacha.get(item.itemName);
-		} catch (NullPointerException e){
+			GachaAbstract g = beforeSetUpGacha.get(item.itemName);
+			if(g != null){
+				return g;
+			} else{
+				throw new Exception("이전객체없음");
+			}
+		} catch (Exception e){
 
 			String itemName = item.itemName;
 			Map<String,Integer> needItemValue = itemManager.getNeedItemValue(itemName);

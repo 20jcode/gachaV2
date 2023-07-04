@@ -9,12 +9,15 @@ public abstract class GachaManagerAbstract {
 
 	public ItemManagerAbstract itemManager;
 
-	protected GachaManagerAbstract(){};
+	protected GachaManagerAbstract(){
+		ans = new ArrayList<>();
+		beforeSetUpGacha = new HashMap<>();
+	};
 
 	public GachaManagerAbstract(ItemManagerAbstract itemManager){
 
 		this.itemManager = itemManager;
-		this.beforeSetUpGacha = new HashMap<>();
+
 	}
 	public abstract void doGacha(ItemAbstract item);
 
