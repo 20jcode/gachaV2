@@ -32,22 +32,26 @@ public class GachaModelImpl implements GachaModel {
 
 		// TODO : 생성 시 어떤 item에 대한 모델인지는 스스로 알아야하지 않을까?
 
-		int count = 0;
+
 		int correctCount = 0;
 
-		while(isEnough()){
+		while(isNotEnough(itemId)){
 
 			// 특정횟수 뽑기 시 지급 아이템 연산
-			gachaAns.addItem(skyRule.getItem(itemId,count));
+			for(int i : skyRule.getSky(itemId,gachaAns.getCount())){
+				gachaAns.addItem(i);
+			}
 
 			// 뽑기 보정 연산
 			if(probabilityCorrectionRule.isCorrect(itemId,correctCount)){
-				gachaAns.addItem(probabilityCorrectionRule.getItem(itemId,correctCount));
-				count += 1;
+				for(int i : probabilityCorrectionRule.getCorrect(itemId,correctCount)){
+					gachaAns.addItem(i);
+				}
+				gachaAns.countUp();
 				correctCount = 0;
 			} else { //보정 연산이 아닐 경우 일반 뽑기 실행
-				gachaAns.addItem(cal());
-				count += 1;
+				gachaAns.addItem(cal(itemId));
+				gachaAns.countUp();
 				correctCount += 1;
 
 			}
@@ -58,18 +62,19 @@ public class GachaModelImpl implements GachaModel {
 		return gachaAns;
 	}
 
-	private boolean isEnough(int itemId){
-		if(useItem.getNeedItemSet(itemId) <= gachaAns.getHaveItemSet(itemId)){ //equal 처리해주기
-			//반복자 패턴 넣어주기
-			//충분한 경우
-			return false;
-		} else{
-			return true;
+	private boolean isNotEnough(int itemId){
+
+		for(int i : useItem.getNeedItem(itemId)){
+			if(useItem.getNeedItemValue(i) > gachaAns.getItemValue(i)){
+				return true; //충분하지 않을 경우
+			}
 		}
+		return false;
+
 	}
 
-	private String cal(){
-		oneAnsGacha = new OneAnsGacha(probability.getdata());
+	private int cal(int itemId){
+		oneAnsGacha = new OneAnsGacha(probability.getData(itemId));
 
 
 		return oneAnsGacha.getAns();
