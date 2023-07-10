@@ -4,7 +4,11 @@ public interface ItemComponent {
 
 	void add();
 	void remove();
-	void getName();
-	void getProbability();
-	void getChild();
+	String getName();
+	Double getProbability();
+	ItemComponent getChild();
+
+	int getId();
+
+
 }

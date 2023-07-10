@@ -1,4 +1,4 @@
-package org.gacha.calLogic;
+package org.implOPM.model.gachalogic;
 
 import java.util.HashMap;
 import java.util.Map;

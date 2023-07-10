@@ -1,4 +1,4 @@
-package org.designpattern.model.GachaInterface;
+package org.designpattern.model.gachaInterface;
 
 public interface ProbabilityCorrectionRule {
 }
