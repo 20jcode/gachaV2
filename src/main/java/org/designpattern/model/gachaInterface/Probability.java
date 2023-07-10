@@ -4,7 +4,7 @@ import java.util.Map;
 
 public interface Probability {
 
-	void add();
-	void remove();
-	Map<Integer,Double> getData(int itemId);
+	void add(int itemId,double num);
+	void remove(int itemId);
+	double getDatas (int itemId);
 }

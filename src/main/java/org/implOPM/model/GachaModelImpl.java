@@ -74,9 +74,9 @@ public class GachaModelImpl implements GachaModel {
 	}
 
 	private int cal(int itemId){
-		oneAnsGacha = new OneAnsGacha(probability.getData(itemId));
-
-
-		return oneAnsGacha.getAns();
+		//oneAnsGacha = new OneAnsGacha(probability.getData(itemId));
+		//return oneAnsGacha.getAns();
+		// TODO : 알고리즘 만들어서 넣기
+		return 1;
 	}
 }
