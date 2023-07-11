@@ -1,5 +1,7 @@
 package org.designpattern.model.dataformat;
 
+import java.util.Set;
+
 public abstract class ItemComponent {
 
 	public void add(ItemComponent itemComponent){
@@ -11,10 +13,7 @@ public abstract class ItemComponent {
 	public String getName(){
 		throw new UnsupportedOperationException();
 	}
-	public Double getProbability(){
-		throw new UnsupportedOperationException();
-	} //TODO : 필요가 없는 부분?
-	public ItemComponent getChild(){
+	public ItemComponent getChild(int i){
 		throw new UnsupportedOperationException();
 	}
 

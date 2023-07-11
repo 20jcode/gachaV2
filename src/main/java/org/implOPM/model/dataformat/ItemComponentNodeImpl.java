@@ -4,6 +4,7 @@ import org.designpattern.model.dataformat.ItemComponent;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class ItemComponentNodeImpl extends ItemComponent {
 	// 아이템 이름
@@ -41,5 +42,10 @@ public class ItemComponentNodeImpl extends ItemComponent {
 	@Override
 	public String getName(){
 		return itemName;
+	}
+
+	@Override
+	public ItemComponent getChild(int i){
+		return itemList.get(i);
 	}
 }

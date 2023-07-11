@@ -11,7 +11,8 @@ import org.implOPM.model.gachalogic.OneAnsGacha;
 
 import java.util.Random;
 
-public class GachaModelImpl implements GachaModel {
+public class
+GachaModelImpl implements GachaModel {
 
 	private ItemComponent itemComponent;
 	private SkyRule skyRule;
