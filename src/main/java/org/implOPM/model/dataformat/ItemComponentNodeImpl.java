@@ -6,11 +6,23 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ItemComponentNodeImpl extends ItemComponent {
+	// 아이템 이름
+	// 아이템 아이디 -> 전역적으로 관리되야하지않나? 일단 생성시 입력해주는 것으로 하자.
 
-	private String ItemName;
-	private List<ItemComponent> itemList = new LinkedList<>();
+	//TODO : itemId 중복되지 않도록 관리해주는 객체가 있어야...
 
-	private int ItemId;
+	private String itemName;
+	private List<ItemComponent> itemList;
+
+	private int itemId;
+
+	//생성자
+	public ItemComponentNodeImpl(int itemId,String itemName){
+
+		itemList = new LinkedList<>();
+		this.itemId = itemId;
+		this.itemName = itemName;
+	}
 
 	@Override
 	public void add(ItemComponent itemComponent){
@@ -21,5 +33,13 @@ public class ItemComponentNodeImpl extends ItemComponent {
 		itemList.remove(itemComponent);
 	}
 
+	@Override
+	public int getId(){
+		return itemId;
+	}
 
+	@Override
+	public String getName(){
+		return itemName;
+	}
 }

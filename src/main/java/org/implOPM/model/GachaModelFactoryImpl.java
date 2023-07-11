@@ -14,7 +14,7 @@ public class GachaModelFactoryImpl implements GachaModelAbstractFactory {
 	@Override
 	public ItemComponent createItem () {
 		//TODO : 작업 후 로직 정의해주기
-		return new ItemComponentNodeImpl();
+		return null;
 	}
 
 	@Override

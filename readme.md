@@ -87,3 +87,8 @@ ItemComponent 먼저 만들어보자
 
 지금 버전을 메인버전으로 해야겟다...
 
+Gacha V2.0으로 복원완.
+
+---
+
+ItemComponentNodeImplTest 작성
