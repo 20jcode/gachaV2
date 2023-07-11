@@ -66,9 +66,10 @@ GachaModelImpl implements GachaModel {
 	}
 
 	private boolean isNotEnough(){
+		//TODO : 수정필요
 
 		for(int i : useItem.getNeedItem(itemId)){
-			if(useItem.getNeedItemValue(i) > gachaAns.getItemValue(i)){
+			if(useItem.getSpendNum(i) > gachaAns.getItemValue(i)){
 				return true; //충분하지 않을 경우
 			}
 		}

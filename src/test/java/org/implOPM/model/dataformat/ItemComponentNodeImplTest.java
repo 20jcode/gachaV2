@@ -61,14 +61,9 @@ class ItemComponentNodeImplTest {
 
 			//then
 
-
-
 			assertEquals(expect1,test1);
 			assertEquals(expect2,test2);
 
-
-
-			
 		}
 
 	}
