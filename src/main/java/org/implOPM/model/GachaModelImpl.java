@@ -27,15 +27,17 @@ public class GachaModelImpl implements GachaModel {
 
 	private Probability probability;
 
+	private int itemId;
+
 	@Override
-	public GachaAns doGacha (int itemId) {
+	public GachaAns doGacha () {
 
 		// TODO : 생성 시 어떤 item에 대한 모델인지는 스스로 알아야하지 않을까?
 
 
 		int correctCount = 0;
 
-		while(isNotEnough(itemId)){
+		while(isNotEnough()){
 
 			// 특정횟수 뽑기 시 지급 아이템 연산
 			for(int i : skyRule.getSky(itemId,gachaAns.getCount())){
@@ -50,7 +52,7 @@ public class GachaModelImpl implements GachaModel {
 				gachaAns.countUp();
 				correctCount = 0;
 			} else { //보정 연산이 아닐 경우 일반 뽑기 실행
-				gachaAns.addItem(cal(itemId));
+				gachaAns.addItem(cal());
 				gachaAns.countUp();
 				correctCount += 1;
 
@@ -62,7 +64,7 @@ public class GachaModelImpl implements GachaModel {
 		return gachaAns;
 	}
 
-	private boolean isNotEnough(int itemId){
+	private boolean isNotEnough(){
 
 		for(int i : useItem.getNeedItem(itemId)){
 			if(useItem.getNeedItemValue(i) > gachaAns.getItemValue(i)){
@@ -73,7 +75,7 @@ public class GachaModelImpl implements GachaModel {
 
 	}
 
-	private int cal(int itemId){
+	private int cal(){
 		//oneAnsGacha = new OneAnsGacha(probability.getData(itemId));
 		//return oneAnsGacha.getAns();
 		// TODO : 알고리즘 만들어서 넣기
