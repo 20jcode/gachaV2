@@ -6,37 +6,38 @@ import org.designpattern.model.gachaInterface.Probability;
 import org.designpattern.model.gachaInterface.ProbabilityCorrectionRule;
 import org.designpattern.model.gachaInterface.SkyRule;
 import org.designpattern.model.gachaInterface.UseItem;
+import org.implOPM.model.dataformat.ItemComponentNodeImpl;
 
 public class GachaModelFactoryImpl implements GachaModelAbstractFactory {
 
 
 	@Override
 	public ItemComponent createItem () {
-
-		return null;
+		//TODO : 작업 후 로직 정의해주기
+		return new ItemComponentNodeImpl();
 	}
 
 	@Override
 	public UseItem createUseItem () {
 
-		return null;
+		return new UseItemImpl();
 	}
 
 	@Override
 	public Probability createProbability () {
 
-		return null;
+		return new ProbabilityImpl();
 	}
 
 	@Override
 	public ProbabilityCorrectionRule createProbabilityCorrectionRule () {
 
-		return null;
+		return new ProbabilityCorrectionRuleImpl();
 	}
 
 	@Override
 	public SkyRule createSkyRule () {
 
-		return null;
+		return new SkyRuleImpl();
 	}
 }
