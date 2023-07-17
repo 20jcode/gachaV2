@@ -12,9 +12,14 @@ public class GachaModelFactoryImpl implements GachaModelAbstractFactory {
 
 
 	@Override
-	public ItemComponent createItem () {
-		//TODO : 작업 후 로직 정의해주기
-		return null;
+	public ItemComponent createItemComp () {
+
+		//TODO : 나중에는 사용자의 데이터 입출력을 받아서 진행될 수 있도록
+
+		CreateItemComp c = new CreateItemComp();
+
+		return c.opmItemSet();
+
 	}
 
 	@Override

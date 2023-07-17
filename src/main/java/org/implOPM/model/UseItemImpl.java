@@ -26,6 +26,8 @@ public class UseItemImpl implements UseItem {
 			}
 		}
 
+		throw new IndexOutOfBoundsException("탐색값이 없습니다");
+
 	}
 
 	 static class _Data {

@@ -11,4 +11,8 @@ public interface ProbabilityCorrectionRule {
 	boolean isCorrect(int itemId,int correctCount);
 
 	int[] getCorrect(int itemId,int correctCount);
+
+	void add(int itemId,int correctCount);
+
+	void remove(int itemId);
 }

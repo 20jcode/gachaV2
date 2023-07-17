@@ -12,7 +12,7 @@ import org.designpattern.model.gachaInterface.UseItem;
 public interface GachaModelAbstractFactory {
 
 
-	ItemComponent createItem();
+	ItemComponent createItemComp ();
 	UseItem createUseItem();
 	Probability createProbability();
 	ProbabilityCorrectionRule createProbabilityCorrectionRule();

@@ -44,8 +44,14 @@ public class ItemComponentNodeImpl extends ItemComponent {
 		return itemName;
 	}
 
+	/**
+	 * 어떤 아이템을 조합하여서 만들 수 있는가에 대해
+	 * @param i
+	 * @return 하위 아이템 목록
+	 */
 	@Override
 	public ItemComponent getChild(int i){
 		return itemList.get(i);
 	}
+
 }
